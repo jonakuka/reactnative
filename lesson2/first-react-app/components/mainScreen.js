@@ -1,0 +1,11 @@
+import React from "react";
+import {Text, StyleSheet, View} from "react-native"
+
+function mainScreen(){
+    return(
+        <>
+        <div>hello from main screen</div>
+        </>
+    )
+}
+ export default mainScreen
