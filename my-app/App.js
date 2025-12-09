@@ -10,12 +10,14 @@ import StudentDetail from "./components/StudentDetail";
 import StudentScreen from "./screens/StudentScreen";
 import ProfileScreen from "./screens/ProfileScreen";
 import ProfileScreen2 from "./screens/ProfileScreen2";
+import BoxScreen from "./screens/BoxScreen";
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <ProfileScreen2 />
+    //<ProfileScreen2 />
+    <BoxScreen />
   );
 }
 
