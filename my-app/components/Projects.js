@@ -1,25 +1,24 @@
 import React from "react";
 import { View, Image, StyleSheet } from "react-native";
 
-export default function Projects({ image }) {
+const Projects = ({ image }) => {
   return (
-    <View style={styles.card}>
+    <View style={styles.container}>
       <Image source={image} style={styles.image} resizeMode="cover" />
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
-  card: {
-    width: "48%",
-    height: 120,
-    backgroundColor: "#fff",
-    borderRadius: 8,
-    overflow: "hidden",
-    shadowColor: "#000",
-    shadowOpacity: 0.08,
-    shadowRadius: 6,
-    elevation: 2,
+  container: {
+    marginRight: 12,
   },
-  image: { width: "100%", height: "100%" },
+  image: {
+    width: 160,
+    height: 110,
+    borderRadius: 8,
+    backgroundColor: "#ddd",
+  },
 });
+
+export default Projects;

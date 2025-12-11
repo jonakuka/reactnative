@@ -1,50 +1,70 @@
 import React from "react";
-import { View, Text, StyleSheet, ScrollView } from "react-native";
-import ProfileInfo from "../components/ProfileInfo";
+import { SafeAreaView, ScrollView, View, Text, StyleSheet } from "react-native";
+import StudentInfo from "../components/StudentInfo";
 import Projects from "../components/Projects";
 
-export default function ProfileScreen() {
-  // reuse existing asset(s) - adjust paths if your images differ
-  const avatar = require("../assets/person1.jpg");
+const ProfileScreen = () => {
+  // Sample data passed as props to components. Replace with real data as needed.
+  const fullname = "JOHN DOE";
+  const position = "UI/UX Designer";
+  const description =
+    "We're passionate about creating beautiful desing for startups & leading brands";
+
+  // Using placeholder remote images so the component works without local assets.
+  const profileImage = { uri: "https://i.pravatar.cc/600" };
+  const projectImages = [
+    { uri: "https://picsum.photos/300/200?1" },
+    { uri: "https://picsum.photos/300/200?2" },
+  ];
 
   return (
-    <ScrollView style={styles.container} contentContainerStyle={styles.content}>
-      <ProfileInfo
-        fullname="JOHN DOE"
-        position="UI/UX Designer"
-        description="We're passionate about creating beautiful design for startups & leading brands"
-        image={avatar}
-      />
+    <SafeAreaView style={styles.safe}>
+      <ScrollView contentContainerStyle={styles.scroll}>
+        <StudentInfo
+          fullname={fullname}
+          position={position}
+          description={description}
+          profileImage={profileImage}
+        />
 
-      <View style={styles.projectsHeader}>
-        <Text style={styles.projectsTitle}>PROJECTS</Text>
-        <Text style={styles.viewAll}>View All</Text>
-      </View>
+        <View style={styles.projectsSection}>
+          <View style={styles.projectsHeader}>
+            <Text style={styles.projectsTitle}>PROJECTS</Text>
+            <View style={styles.viewAllButton}>
+              <Text style={styles.viewAllText}>View All</Text>
+            </View>
+          </View>
 
-      <View style={styles.projectsRow}>
-        <Projects image={avatar} />
-        <Projects image={avatar} />
-      </View>
-    </ScrollView>
+          <View style={styles.projectsRow}>
+            {projectImages.map((img, idx) => (
+              <Projects key={idx} image={img} />
+            ))}
+          </View>
+        </View>
+      </ScrollView>
+    </SafeAreaView>
   );
-}
+};
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: "#f7f7f7" },
-  content: { alignItems: "center", paddingVertical: 20 },
+  safe: { flex: 1, backgroundColor: "#fff" },
+  scroll: { paddingBottom: 24 },
+  projectsSection: { paddingHorizontal: 18 },
   projectsHeader: {
-    width: "90%",
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    marginTop: 20,
-    marginBottom: 10,
+    marginBottom: 12,
   },
-  projectsTitle: { fontWeight: "700", fontSize: 14 },
-  viewAll: { color: "#f5a623", fontWeight: "600" },
-  projectsRow: {
-    width: "90%",
-    flexDirection: "row",
-    justifyContent: "space-between",
+  projectsTitle: { fontWeight: "700" },
+  viewAllButton: {
+    backgroundColor: "#ffd400",
+    paddingHorizontal: 10,
+    paddingVertical: 6,
+    borderRadius: 14,
   },
+  viewAllText: { fontWeight: "700" },
+  projectsRow: { flexDirection: "row" },
 });
+
+export default ProfileScreen;
