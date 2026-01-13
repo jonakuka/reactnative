@@ -2,32 +2,35 @@
 import { StatusBar } from "expo-status-bar";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import React from 'react';
 
-import MainScreen from "./screens/MainScreen";
-import ListScreen from "./screens/ListScreen";
-import StudentScreen from "./screens/StudentScreen";
-import ProfileScreen from "./screens/ProfileScreen";
-import BoxScreen from "./screens/BoxScreen";
-import PostScreen from "./screens/PostScreen";
+// import MainScreen from "./screens/MainScreen";
+// import ListScreen from "./screens/ListScreen";
+// import StudentScreen from "./screens/StudentScreen";
+// import ProfileScreen from "./screens/ProfileScreen";
+// import BoxScreen from "./screens/BoxScreen";
+// import PostsScreen from "./screens/PostsScreen";
+import CountriesScreen from "./screens/CountriesScreen";
+import ProductScreen from './src/screens/ProductScreen';
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    //    <NavigationContainer>
-    //      <Stack.Navigator
-    //      initialRouteName="Main"
-    //      screenOptions={{
-    //         title: "My App",
-    //      }}
-    //     >
-    //      //  <Stack.Screen name="Main" component={MainScreen} />
-    //       <Stack.Screen name="List" component={ListScreen} />
+    // <NavigationContainer>
+    //   <Stack.Navigator
+    //     initialRouteName="Main"
+    //     screenOptions={{
+    //       title: "My App",
+    //     }}
+    //   >
+    //     <Stack.Screen name="Main" component={MainScreen} />
+    //     <Stack.Screen name="List" component={PostsScreen} />
+    //     <Stack.Screen name="Countries" component={CountriesScreen} />
+    //   </Stack.Navigator>
 
-    //      </Stack.Navigator>
-
-    //    <StatusBar style="auto" />
-    //  </NavigationContainer>
-   <PostScreen/>
+    //   <StatusBar style="auto" />
+    // </NavigationContainer>
+    <ProductScreen />
   );
 }

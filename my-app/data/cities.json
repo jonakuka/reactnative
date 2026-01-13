@@ -1,0 +1,44 @@
+[
+    {
+        "id":1,
+        "name":"Prishtina",
+        "countryCode":"ks",
+        "population":258163,
+        "description":"Kryeqiteti i Kosoves"
+    },
+     {
+        "id":2,
+        "name":"Kacanik",
+        "countryCode":"ks",
+        "population":258163,
+        "description":"Kryeqiteti i Kosoves"
+    },
+     {
+        "id":3,
+        "name":"Pej",
+        "countryCode":"ks",
+        "population":258163,
+        "description":"Kryeqiteti i Kosoves"
+    },
+     {
+        "id":4,
+        "name":"Malishev",
+        "countryCode":"ks",
+        "population":258163,
+        "description":"Kryeqiteti i Kosoves"
+    },
+     {
+        "id":5,
+        "name":"Prizren",
+        "countryCode":"ks",
+        "population":258163,
+        "description":"Kryeqiteti i Kosoves"
+    },
+     {
+        "id":6,
+        "name":"Ferizaj",
+        "countryCode":"ks",
+        "population":258163,
+        "description":"Kryeqiteti i Kosoves"
+    }
+]
