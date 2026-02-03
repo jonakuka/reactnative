@@ -1,0 +1,28 @@
+{
+    "popularproducts": [
+        {
+            "id": 1,
+            "name": "Wireless Headphones",
+            "price": 99.99,
+            "category": "Electronics",
+            "image": "https://images.unsplash.com/photo-1525101238777-8878781fc06d",
+            "description": "High quality wireless headphones with noise cancellation."
+        },
+        {
+            "id": 2,
+            "name": "Smart Watch",
+            "price": 199.99,
+            "category": "Watches",
+            "image": "https://images.unsplash.com/photo-1530319067432-f2a729c03db5",
+            "description": "mystic smart watch with health tracking features."
+        },
+        {
+            "id": 3,
+            "name": "Bluetooth Speaker",
+            "price": 49.99,
+            "category": "Audio",
+            "image": "https://images.unsplash.com/photo-1610945264803-c22b62d2a7b3",
+            "description": "Portable Bluetooth speaker with powerful sound."
+        }
+    ]
+}
